@@ -36,7 +36,9 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Iterable<Movie> findAll() {
         List<Movie> movies = new ArrayList<>();
-        movieRepository.findAll().iterator().forEachRemaining(movie -> movies.add(movie));
+        movieRepository.findAll()
+            .iterator()
+            .forEachRemaining(movie -> movies.add(movie));
         return movies;
     }
 
